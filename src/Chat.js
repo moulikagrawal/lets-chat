@@ -9,7 +9,7 @@ import axios from "./axios.js"
 
 function Chat({messages}) {
     const [input, setInput] = useState("");
-    function sendMessage(e) {
+    const sendMessage(e) {
         e.preventDefault()
 
         await axios.post('/messages/new', {
