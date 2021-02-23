@@ -9,8 +9,8 @@ import axios from "./axios.js"
 
 function Chat({messages}) {
     const [input, setInput] = useState("");
-    const sendMessage(e) {
-        e.preventDefault()
+    const sendMessage = async (e) => {
+        e.preventDefault();
 
         await axios.post('/messages/new', {
             message: input,
@@ -19,8 +19,8 @@ function Chat({messages}) {
             received: false
         })
 
-        setInput('')
-    }
+        setInput('');
+    };
 
     return (
         <div className = 'chat'>
@@ -82,4 +82,4 @@ function Chat({messages}) {
     )
 }
 
-export default Chat;
+export default Chat
