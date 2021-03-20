@@ -9,7 +9,7 @@ import { SearchOutlined } from '@material-ui/icons';
 
 function Sidebar() {
   return (
-    <div className ='sidebar'>
+    <div className='sidebar'>
       <div className='sidebar_header'>
         <Avatar />
         <div className='sidebar_headerRight'>
@@ -24,16 +24,16 @@ function Sidebar() {
           </IconButton>
         </div>
       </div>
-      <div className='sidebar_search'>
-        <div className='sidebar_searchContainer'>
-          <SearchOutlined />
-          <input placeholder='Search or start new chat' type='text' />
+      <div className='sidebar_lower'>
+        <div className='sidebar_search'>
+          <div className='sidebar_searchContainer'>
+            <SearchOutlined />
+            <input placeholder='Search or start new chat' type='text' />
+          </div>
         </div>
-      </div>
-      <div class='sidebar_chats'>
-        <SidebarChat />
-        <SidebarChat />
-        <SidebarChat />
+        <div class='sidebar_chats'>
+          <SidebarChat />
+        </div>
       </div>
     </div>
   );

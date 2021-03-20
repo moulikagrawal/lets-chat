@@ -14,7 +14,6 @@ function App() {
       });
   }, []);
 
-
   useEffect(() => {
     const pusher = new Pusher('1bd343ce6abd5ecbe8ea', {
       cluster: 'ap2'
@@ -22,7 +21,6 @@ function App() {
 
     const channel = pusher.subscribe('messages');
     channel.bind('inserted', (newMessage) => {
-      alert(JSON.stringify(newMessage));
       setMessages([...messages, newMessage])
     });
 
@@ -32,8 +30,6 @@ function App() {
     }
 
   }, [messages]);
-
-  console.log(messages);
 
   return (
     <div className="app">

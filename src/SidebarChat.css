@@ -17,3 +17,23 @@
 .sidebarChat_info {
     margin-left: 15px;
 }
+
+@media (max-width: 767px) {
+    .sidebarChat {
+        display: block;
+        padding: 10px;
+    }
+
+    .sidebarChat_info {
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .sidebarChat_info > h2 {
+        font-size: 14px;
+    }
+
+    .sidebarChat_info > p {
+        display: none;
+    }
+}
